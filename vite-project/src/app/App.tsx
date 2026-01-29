@@ -4,8 +4,10 @@ import { LetterSection } from './components/ui/LetterSection';
 import { QuestionSection } from './components/ui/QuestionSection';
 import { CelebrationModal } from './components/ui/CelebrationModal';
 import { triggerConfetti } from '../utils/celebration';
+import { CARDS } from '../constants';
 
 export default function App() {
+  const [activeCardId, setActiveCardId] = useState<string | null>(null);
   const [showCelebration, setShowCelebration] = useState(false);
 
   const handleYesClick = () => {
@@ -22,7 +24,11 @@ export default function App() {
       
       <HeroSection />
       
-      <LetterSection />
+      <LetterSection 
+        cards={CARDS}
+        activeCardId={activeCardId}
+        onToggleCard={(id) => setActiveCardId((prev) => (prev === id ? null : id))}
+      />
       
       <QuestionSection 
         onYes={handleYesClick} 

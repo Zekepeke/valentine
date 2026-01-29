@@ -1,8 +1,16 @@
 import { motion } from 'motion/react';
-import { Heart } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
+import { Card } from '../../models/Cards';
+import * as C from "../../../constants";
 
-export const LetterSection = () => {
+type AnimatedSceneProps = {
+  cards: ReadonlyArray<C.CardConfig>;
+  activeCardId: string | null;
+  onToggleCard: (id: string) => void;
+};
+
+
+export function LetterSection({ cards, activeCardId, onToggleCard }: AnimatedSceneProps) {
   return (
     <section className="min-h-screen flex items-center justify-center px-4 py-20">
         <motion.div
@@ -21,15 +29,17 @@ export const LetterSection = () => {
             >
               <ambientLight intensity={0.5} />
               <directionalLight position={[5, 5, 5]} />
-              <mesh>
-                <planeGeometry args={[10, 14, 32, 32]} />
-                <meshStandardMaterial 
-                  color="#fff0f6" 
-                  roughness={1} 
-                  metalness={0} 
-                  side={2} 
+              {cards.map((card) => (
+                <Card
+                  key={card.id}
+                  id={card.id}
+                  image={card.image}
+                  tablePosition={card.position}
+                  tableRotation={card.rotation}
+                  isActive={activeCardId === card.id}
+                  onToggle={onToggleCard}
                 />
-              </mesh>
+              ))}
             </Canvas>
             
           </div>
