@@ -8,7 +8,7 @@ interface QuestionSectionProps {
 
 export const QuestionSection = ({ onYes, onNo }: QuestionSectionProps) => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-20">
+    <section className="min-h-screen flex items-center justify-center px-4 py-12 md:py-20">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,24 +19,25 @@ export const QuestionSection = ({ onYes, onNo }: QuestionSectionProps) => {
         <motion.div
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="mb-12"
+          className="mb-8 md:mb-12"
         >
-          <Heart className="w-24 h-24 mx-auto text-rose-500 fill-rose-500 drop-shadow-lg" />
+          <Heart className="w-16 h-16 md:w-24 md:h-24 mx-auto text-rose-500 fill-rose-500 drop-shadow-lg" />
         </motion.div>
 
-        <h2 className="text-5xl md:text-7xl font-['Playfair_Display'] text-rose-900 mb-12">
+        <h2 className="text-4xl md:text-7xl font-['Playfair_Display'] text-rose-900 mb-8 md:mb-12">
           Be My Valentine?
         </h2>
 
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        {/* Flex Col for Mobile, Flex Row for Desktop */}
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onYes}
-            className="group relative overflow-hidden bg-gradient-to-r from-rose-500 to-pink-600 text-white px-12 py-6 rounded-full shadow-2xl font-['Quicksand'] text-2xl font-semibold transition-all hover:shadow-rose-300 hover:shadow-2xl"
+            className="group relative overflow-hidden bg-gradient-to-r from-rose-500 to-pink-600 text-white w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 rounded-full shadow-2xl font-['Quicksand'] text-xl md:text-2xl font-semibold transition-all"
           >
-            <span className="relative z-10 flex items-center gap-3">
-              <Heart className="w-7 h-7 fill-white" />
+            <span className="relative z-10 flex items-center justify-center gap-3">
+              <Heart className="w-6 h-6 fill-white" />
               YES!
             </span>
             <motion.div
@@ -51,20 +52,11 @@ export const QuestionSection = ({ onYes, onNo }: QuestionSectionProps) => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={onNo}
-            className="bg-gray-200 text-gray-600 px-12 py-6 rounded-full shadow-lg font-['Quicksand'] text-2xl font-semibold hover:bg-gray-300 transition-all"
+            className="bg-gray-200 text-gray-600 w-full sm:w-auto px-8 md:px-12 py-4 md:py-6 rounded-full shadow-lg font-['Quicksand'] text-xl md:text-2xl font-semibold hover:bg-gray-300 transition-all"
           >
             No
           </motion.button>
         </div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="mt-8 text-rose-600 font-['Quicksand'] text-lg"
-        >
-          (But I hope you'll say yes! 💕)
-        </motion.p>
       </motion.div>
     </section>
   );
