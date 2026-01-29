@@ -15,12 +15,12 @@ export const HeroSection = () => {
             <video
               className="w-full h-full object-cover rounded-2xl"
               controls
-              poster="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=800&q=80"
             >
-              <source src="" type="video/mp4" />
+              <source src="/timeline.mp4" type="video/mp4" />
+              
+              {/* text shows if the browser CANNOT play the video */}
               <div className="flex flex-col items-center justify-center h-full text-rose-400">
-                <Heart className="w-24 h-24 mb-4 animate-pulse" />
-                <p className="text-2xl font-['Quicksand']">Your Personal Video Here</p>
+                <p>Your browser does not support the video tag.</p>
               </div>
             </video>
           </div>
