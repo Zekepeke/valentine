@@ -4,6 +4,7 @@ import { Heart } from 'lucide-react';
 
 interface QuestionSectionProps {
   onYes: () => void;
+  onNo: () => void;
 }
 
 export const QuestionSection = ({ onYes }: QuestionSectionProps) => {
