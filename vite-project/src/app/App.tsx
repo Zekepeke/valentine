@@ -7,10 +7,8 @@ import { CARDS } from '../constants';
 
 export default function App() {
   const [activeCardId, setActiveCardId] = useState<string | null>(null);
-  const [showCelebration, setShowCelebration] = useState(false);
 
   const handleYesClick = () => {
-    setShowCelebration(true);
     triggerConfetti();
   };
 

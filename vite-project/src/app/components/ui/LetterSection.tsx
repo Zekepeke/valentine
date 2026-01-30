@@ -3,7 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Card } from '../../models/Cards';
 import * as C from "../../../constants";
 import { Suspense } from 'react';
-import { Environment, ContactShadows } from '@react-three/drei';
+import { ContactShadows } from '@react-three/drei';
 import Table from '../../models/Table';
 import Thing from '../../models/Things';
 import Rose from '../../models/Rose';

@@ -4,10 +4,9 @@ import { Heart } from 'lucide-react';
 
 interface QuestionSectionProps {
   onYes: () => void;
-  onNo: () => void;
 }
 
-export const QuestionSection = ({ onYes, onNo }: QuestionSectionProps) => {
+export const QuestionSection = ({ onYes }: QuestionSectionProps) => {
   const [noCount, setNoCount] = useState(0);
   const [isAccepted, setIsAccepted] = useState(false);
 
