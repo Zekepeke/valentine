@@ -47,86 +47,113 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* 4. CSS Variables */
 :root {
+  /* Layout Variables */
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #030213;
-  --primary-foreground: oklch(1 0 0);
-  --secondary: oklch(0.95 0.0058 264.53);
-  --secondary-foreground: #030213;
-  --muted: #ececf0;
-  --muted-foreground: #717182;
-  --accent: #e9ebef;
-  --accent-foreground: #030213;
-  --destructive: #d4183d;
-  --destructive-foreground: #ffffff;
-  --border: rgba(0, 0, 0, 0.1);
-  --input: transparent;
-  --input-background: #f3f3f5;
-  --switch-background: #cbced4;
+  --radius: 0.625rem;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
+
+  /* --- ROMANTIC COLOR PALETTE --- */
+  
+  /* Background: Black Rose */
+  --background: #220011;
+  /* Foreground: Smooth Rose Gold */
+  --foreground: #EDCCDD;
+
+  /* Card: Dark Plum */
+  --card: #432133;
+  --card-foreground: #EDCCDD;
+
+  /* Popover: Dark Plum */
+  --popover: #432133;
+  --popover-foreground: #EDCCDD;
+
+  /* Primary: Smooth Rose Gold (Buttons) */
+  --primary: #EDCCDD;
+  --primary-foreground: #220011; /* Black Rose text on buttons */
+
+  /* Secondary: Purple Angel */
+  --secondary: #775566;
+  --secondary-foreground: #EDCCDD;
+
+  /* Muted: Old Purple */
+  --muted: #433254;
+  /* Muted Text: Faded Rose Gold */
+  --muted-foreground: #BB99A9;
+
+  /* Accent: Dark Plum / Purple Angel mix */
+  --accent: #432133;
+  --accent-foreground: #EDCCDD;
+
+  /* Destructive: Kept standard red for alerts, or mapped to deep purple */
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+
+  /* Borders: Purple Angel */
+  --border: #775566;
+  
+  /* Inputs: Dark Plum */
+  --input: #432133;
+  --input-background: #2d1b2a; 
+  
+  /* Ring: Faded Rose Gold */
+  --ring: #BB99A9;
+
+  --switch-background: #775566;
+
+  /* Charts - Kept standard or adapted if needed */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #030213;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Sidebar - Mapping to Dark Plum/Black Rose */
+  --sidebar: #220011;
+  --sidebar-foreground: #EDCCDD;
+  --sidebar-primary: #EDCCDD;
+  --sidebar-primary-foreground: #220011;
+  --sidebar-accent: #432133;
+  --sidebar-accent-foreground: #EDCCDD;
+  --sidebar-border: #775566;
+  --sidebar-ring: #BB99A9;
 }
 
+/* Since the requested palette is inherently dark, 
+   we apply the same colors to .dark to maintain the theme 
+   regardless of system preference.
+*/
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: #220011;
+  --foreground: #EDCCDD;
+  --card: #432133;
+  --card-foreground: #EDCCDD;
+  --popover: #432133;
+  --popover-foreground: #EDCCDD;
+  --primary: #EDCCDD;
+  --primary-foreground: #220011;
+  --secondary: #775566;
+  --secondary-foreground: #EDCCDD;
+  --muted: #433254;
+  --muted-foreground: #BB99A9;
+  --accent: #432133;
+  --accent-foreground: #EDCCDD;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: #775566;
+  --input: #432133;
+  --ring: #BB99A9;
+  --sidebar: #220011;
+  --sidebar-foreground: #EDCCDD;
+  --sidebar-primary: #EDCCDD;
+  --sidebar-primary-foreground: #220011;
+  --sidebar-accent: #432133;
+  --sidebar-accent-foreground: #EDCCDD;
+  --sidebar-border: #775566;
+  --sidebar-ring: #BB99A9;
 }
 
-/* 5. Base Styles */
 @layer base {
   * {
     @apply border-border outline-ring/50;

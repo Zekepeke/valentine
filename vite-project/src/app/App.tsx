@@ -20,7 +20,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-cream-50">
+   <div className="min-h-screen bg-gradient-to-br from-[#080808] via-[#220011] to-[#432133] text-foreground overflow-x-hidden">
       
       <HeroSection />
       
@@ -34,12 +34,6 @@ export default function App() {
         onYes={handleYesClick} 
         onNo={handleNoClick} 
       />
-
-      <CelebrationModal 
-        isOpen={showCelebration} 
-        onClose={() => setShowCelebration(false)} 
-      />
-      
     </div>
   );
 }

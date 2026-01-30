@@ -10,9 +10,7 @@ export const HeroSection = () => {
         transition={{ duration: 0.8 }}
         className="w-full max-w-md z-10" 
       >
-        {/* FIX 1: Changed 'max-w-xs' to 'w-full max-w-md'. 
-           This allows it to grow up to ~450px but shrink on smaller phones.
-        */}
+
         <div className="relative rounded-3xl overflow-hidden shadow-2xl bg-white p-2 md:p-4 mx-auto w-full">
           
           {/* FIX 2: Actually added 'aspect-[9/16]' here.
