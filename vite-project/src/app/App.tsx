@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { HeroSection } from './components/ui/HeroSection';
 import { LetterSection } from './components/ui/LetterSection';
 import { QuestionSection } from './components/ui/QuestionSection';
-import { CelebrationModal } from './components/ui/CelebrationModal';
 import { triggerConfetti } from '../utils/celebration';
 import { CARDS } from '../constants';
 
