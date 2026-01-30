@@ -1,4 +1,3 @@
-import { Vector3 } from "three";
 
 // --- Cards Data ---
 export type CardConfig = {
