@@ -27,12 +27,12 @@ type CardProps = {
   children?: ReactNode;
 };
 
-const CARD_SCALE = 0.25;
-const CARD_WIDTH = 4 * CARD_SCALE;
-const CARD_HEIGHT = 3 * CARD_SCALE;
-const CAMERA_DISTANCE = 1.2;
-const CAMERA_Y_FLOOR = 0.8;
-const HOVER_LIFT = 0.04;
+const CARD_SCALE = 1;
+const CARD_WIDTH = 2.2 * CARD_SCALE;
+const CARD_HEIGHT = 2.2 * CARD_SCALE;
+const CAMERA_DISTANCE = 4;
+const CAMERA_Y_FLOOR = 4.5;
+const HOVER_LIFT = 0.1;
 
 export function Card({
   id,
