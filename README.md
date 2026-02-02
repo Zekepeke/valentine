@@ -18,3 +18,7 @@ If you are developing a production application, we recommend updating the config
 ```
 npm i
 ```
+
+```
+npm run dev
+```
