@@ -25,7 +25,4 @@ dist-ssr
 
 
 # This covers .jpg, .JPG, .jpeg, etc.
-vite-project/public/*.[jJ][pP][gG]
-vite-project/public/*.[jJ][pP][eE][gG]
-vite-project/public/*.[mM][pP]3
-vite-project/public/*.[mM][pP]4
+vite-project/public/
